@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled/controller/auth/login_controller.dart';
 import 'package:untitled/core/constants/color.dart';
+import 'package:untitled/core/constants/imageasset.dart';
 import 'package:untitled/view/widget/auth/customtextbodyauth.dart';
 import 'package:untitled/view/widget/auth/customtextformauth.dart';
 import 'package:untitled/view/widget/auth/customtexttitleauth.dart';
@@ -12,9 +13,11 @@ import '../../widget/auth/custombuttomauth.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     LoginControllerImp controller = Get.put(LoginControllerImp());
+
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.purple,
@@ -65,8 +68,13 @@ class Login extends StatelessWidget {
                 ),
               ),
               CustomButtomAuth(text: "Sign In", onPressed: () {}),
+              CustomButtomAuth2(
+                text: "                           Login With Google  ",
+                onPressed: () {},
+                name: AppImageAsset.logo,
+              ),
               const SizedBox(
-                height: 30,
+                height: 5,
               ),
               CustomTextSignUpOrSignIn(
                   textone: "Don't have an account ?",

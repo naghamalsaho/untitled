@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class CustomTextFormAuth extends StatelessWidget {
   final String hinttext;
   final String labeltext;
@@ -28,9 +29,12 @@ class CustomTextFormAuth extends StatelessWidget {
             label: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 9),
                 child: Text(labeltext)),
+            
             suffixIcon: Icon(iconData),
+
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30))),
+                
       ),
     );
   }

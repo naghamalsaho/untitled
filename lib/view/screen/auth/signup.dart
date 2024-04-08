@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled/controller/auth/signup_controller.dart';
 import 'package:untitled/core/constants/color.dart';
+import 'package:untitled/core/constants/imageasset.dart';
 import 'package:untitled/view/widget/auth/customtextbodyauth.dart';
 import 'package:untitled/view/widget/auth/customtextformauth.dart';
 import 'package:untitled/view/widget/auth/customtexttitleauth.dart';
@@ -64,6 +65,11 @@ class SignUp extends StatelessWidget {
                   onPressed: () {
                     controller.SignUp();
                   }),
+              CustomButtomAuth2(
+                text: "                           Login With Google  ",
+                onPressed: () {},
+                name: AppImageAsset.logo,
+              ),
               const SizedBox(
                 height: 30,
               ),
