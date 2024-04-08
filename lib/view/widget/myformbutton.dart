@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:untitled/controller/auth/information_controller.dart';
+import 'package:untitled/controller/auth/profile_controller.dart';
+import 'package:untitled/view/screen/auth/information.dart';
 
 import '../../core/services/uploadimge.dart';
 
 class MyFormButton extends StatelessWidget {
+  InformationControllerImp controller = Get.put(InformationControllerImp());
   final GlobalKey<FormState> formKey;
   final ImageController imageController = Get.find<ImageController>();
   final TextEditingController firstNameController;
@@ -35,6 +38,7 @@ class MyFormButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () async {
         infoController.Information();
+        controller.goOffProfile();
       },
       child: Text('حفظ البيانات'),
     );

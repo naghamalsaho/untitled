@@ -17,7 +17,6 @@ class ProfileInfo {
     required this.about,
   });
 
-  // تحويل البيانات إلى Map لتخزينها
   Map<String, dynamic> toMap() {
     return {
       'firstName': firstName,
@@ -30,7 +29,6 @@ class ProfileInfo {
     };
   }
 
-  // إنشاء كائن ProfileInfo من Map
   factory ProfileInfo.fromMap(Map<String, dynamic> map) {
     return ProfileInfo(
       firstName: map['firstName'],

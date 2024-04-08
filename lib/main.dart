@@ -7,6 +7,7 @@ import 'package:untitled/core/constants/Apptheme.dart';
 import 'package:untitled/routes.dart';
 
 import 'view/screen/auth/information.dart';
+import 'view/screen/homepage/profile.dart';
 
 void main() async {
   await GetStorage.init();
@@ -56,14 +57,13 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: Colors.purple,
       ),*/
-      home:
-          //Profile(),
-          //ImagePickerWidget(),
-          //Test(),
-          // SettingsScreen(),
-          //  HomeScreen(),
-          //  DrawerOfApp(),
-          Information(),
+      home: Profile(),
+      //ImagePickerWidget(),
+      //Test(),
+      // SettingsScreen(),
+      //  HomeScreen(),
+      //  DrawerOfApp(),
+      // Information(),
       //switchstate(),
       // const Test(),
 

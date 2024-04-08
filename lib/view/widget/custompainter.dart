@@ -10,7 +10,6 @@ class ZigzagPainter extends CustomPainter {
     var path = Path();
     path.moveTo(0, 0);
 
-    // النقطة التي تمثل منتصف الطريق في العرض الكلي للكونتينر
     final double midPoint = size.width / 2;
 
     // الارتفاع العمودي للمنحنى

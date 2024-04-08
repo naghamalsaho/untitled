@@ -71,7 +71,6 @@ class Information extends StatelessWidget {
                 height: 20,
               ),
               contenertextofinformation(),
-              MaterialButton(color: Colors.blue, onPressed: () {})
             ],
           ),
         ),

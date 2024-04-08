@@ -4,12 +4,14 @@ import 'package:untitled/view/screen/auth/forgetpassword/checkemail.dart';
 import 'package:untitled/view/screen/auth/login.dart';
 import 'package:untitled/view/screen/auth/signup.dart';
 import 'package:untitled/view/screen/auth/success_signup.dart';
+import 'package:untitled/view/screen/homepage/profile.dart';
 import 'package:untitled/view/screen/onboarding.dart';
 
 import 'view/screen/auth/forgetpassword/forgetpassword.dart';
 import 'view/screen/auth/forgetpassword/resetpassword.dart';
 import 'view/screen/auth/forgetpassword/success_resetpassword.dart';
 import 'view/screen/auth/forgetpassword/verfiycode.dart';
+import 'view/screen/auth/information.dart';
 
 Map<String, Widget Function(BuildContext)> routes = {
   //Auth
@@ -21,6 +23,8 @@ Map<String, Widget Function(BuildContext)> routes = {
   AppRoute.successResetpassword: (context) => const SuccessResetPassword(),
   AppRoute.successSignUp: (context) => const SuccessSignUp(),
   AppRoute.checkemail: (context) => const CheckEmail(),
+  AppRoute.profile: (context) => Profile(),
+  AppRoute.information: (context) => Information(),
   //OnBoarding
   AppRoute.onBoarding: (context) => const OnBoarding(),
 };

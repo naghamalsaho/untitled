@@ -19,7 +19,6 @@ class contenertextofinformation extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // ... العناصر الأخرى مثل الصورة والعنوان
           CustomTextFormInfo(
             labelText: "الاسم الأول",
             controller: firstNameController,
@@ -95,11 +94,11 @@ class contenertextofinformation extends StatelessWidget {
             formKey: formKey,
             firstNameController: firstNameController,
             lastNameController: lastNameController,
+            skillsController: skillsController,
             aboutController: aboutController,
             birthDateController: birthDateController,
             certificatesController: certificatesController,
             locationController: locationController,
-            skillsController: skillsController,
           )),
         ],
       ),

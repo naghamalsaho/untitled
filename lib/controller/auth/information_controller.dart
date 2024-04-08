@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled/core/class/crud.dart';
 import 'package:untitled/core/class/statusrequest.dart';
+import 'package:untitled/core/constants/routes.dart';
 import 'package:untitled/core/functions/handlingdata.dart';
 import 'package:untitled/data/data_scource/remote/informationdata.dart';
 
 abstract class InformationController extends GetxController {
   Information();
+  goOffProfile();
 }
 
 class InformationControllerImp extends InformationController {
@@ -35,10 +37,8 @@ class InformationControllerImp extends InformationController {
     certificates = TextEditingController();
     about = TextEditingController();
 
-    // تسجيل Crud في GetX
     Get.put(Crud());
 
-    // الآن يمكن إنشاء InformationData لأن Crud متاح
     informationData = InformationData(Get.find());
     super.onInit();
   }
@@ -109,5 +109,10 @@ class InformationControllerImp extends InformationController {
     }
 
     update();
+  }
+
+  @override
+  goOffProfile() {
+    Get.offNamed(AppRoute.profile);
   }
 }
