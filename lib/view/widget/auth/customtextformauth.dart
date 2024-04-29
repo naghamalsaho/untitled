@@ -1,25 +1,31 @@
 import 'package:flutter/material.dart';
 
-
 class CustomTextFormAuth extends StatelessWidget {
   final String hinttext;
   final String labeltext;
   final IconData iconData;
   final TextEditingController? mycontroller;
+  final bool? obscureText;
+  final void Function()? onTapIcon;
+  final String? Function(String?)? valid;
   const CustomTextFormAuth(
-      {Key? key,
+      {super.key,
+      this.obscureText,
+      this.onTapIcon,
       required this.hinttext,
       required this.labeltext,
       required this.iconData,
-      this.mycontroller})
-      : super(key: key);
+      this.mycontroller,
+      required this.valid});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 20),
       child: TextFormField(
+        validator: valid,
         controller: mycontroller,
+        obscureText: obscureText == null || obscureText == false ? false : true,
         decoration: InputDecoration(
             hintText: hinttext,
             hintStyle: const TextStyle(fontSize: 14),
@@ -29,12 +35,12 @@ class CustomTextFormAuth extends StatelessWidget {
             label: Container(
                 margin: const EdgeInsets.symmetric(horizontal: 9),
                 child: Text(labeltext)),
-            
-            suffixIcon: Icon(iconData),
-
+            suffixIcon: InkWell(
+              onTap: onTapIcon,
+              child: Icon(iconData),
+            ),
             border:
                 OutlineInputBorder(borderRadius: BorderRadius.circular(30))),
-                
       ),
     );
   }

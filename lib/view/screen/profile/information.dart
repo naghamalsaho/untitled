@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:untitled/controller/auth/information_controller.dart';
 import 'package:untitled/core/class/crud.dart';
-import 'package:untitled/view/widget/contenertextofinformation.dart';
+import 'package:untitled/view/widget/profile/contenertextofinformation.dart';
+
 import '../../../core/services/uploadimge.dart';
 
 class Information extends StatelessWidget {

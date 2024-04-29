@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/view/widget/customtextforminfo.dart';
-import 'package:untitled/view/widget/myformbutton.dart';
+import 'package:untitled/view/widget/profile/customtextforminfo.dart';
+import 'package:untitled/view/widget/profile/myformbutton.dart';
 
 class contenertextofinformation extends StatelessWidget {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();

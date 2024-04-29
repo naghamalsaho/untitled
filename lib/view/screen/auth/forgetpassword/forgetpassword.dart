@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled/controller/auth/forgetpassword_controller.dart';
 import 'package:untitled/core/constants/color.dart';
+import 'package:untitled/core/functions/validinput.dart';
 import 'package:untitled/view/widget/auth/custombuttomauth.dart';
 import 'package:untitled/view/widget/auth/customtextbodyauth.dart';
 import 'package:untitled/view/widget/auth/customtextformauth.dart';
@@ -41,6 +42,9 @@ class ForgetPassword extends StatelessWidget {
                 height: 15,
               ),
               CustomTextFormAuth(
+                valid: (val) {
+                  return validInput(val!, 8, 50, "email");
+                },
                 mycontroller: controller.email,
                 hinttext: "Enter Your Email",
                 labeltext: "Email",

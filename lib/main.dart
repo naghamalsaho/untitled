@@ -3,14 +3,19 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:untitled/controller/auth/information_controller.dart';
 import 'package:untitled/core/class/crud.dart';
-import 'package:untitled/core/constants/Apptheme.dart';
-import 'package:untitled/routes.dart';
 
-import 'view/screen/auth/information.dart';
-import 'view/screen/homepage/profile.dart';
+import 'package:untitled/core/services/services.dart';
+import 'package:untitled/routes.dart';
+import 'package:untitled/view/screen/auth/login.dart';
+
+import 'view/screen/nnn.dart';
+import 'view/screen/profile/profile.dart';
 
 void main() async {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   await GetStorage.init();
+  WidgetsFlutterBinding.ensureInitialized();
   final ThemeController themeController = Get.put(ThemeController());
 
   Get.put(ThemeController());
@@ -26,6 +31,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    Get.put(MyServices());
     Get.put(Crud());
     Get.put(InformationControllerImp());
     final ThemeController themeController = Get.find();
@@ -57,7 +63,9 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: Colors.purple,
       ),*/
-      home: Profile(),
+      home: Login(),
+      //nnn(),
+      // Profile(),
       //ImagePickerWidget(),
       //Test(),
       // SettingsScreen(),
@@ -68,7 +76,8 @@ class MyApp extends StatelessWidget {
       // const Test(),
 
       //Login(),
-      routes: routes,
+
+      getPages: routes,
     );
   }
 }

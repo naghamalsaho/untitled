@@ -5,7 +5,7 @@ import 'package:untitled/controller/auth/profile_controller.dart';
 import 'package:untitled/view/widget/auth/custombuttomauth.dart';
 import 'dart:io';
 
-import 'package:untitled/view/widget/wavecontainer.dart';
+import 'package:untitled/view/widget/profile/wavecontainer.dart';
 
 class Profile extends StatelessWidget {
   ProfileControllerImp controller = Get.put(ProfileControllerImp());
@@ -56,8 +56,49 @@ class Profile extends StatelessWidget {
                   : null,
             ),
           ),
-          const SizedBox(height: 50), // استخدام SizedBox للمسافة
-          WaveContainer(
+          const SizedBox(height: 70),
+          Container(
+            width: 1,
+            child: Card(
+              color: Colors.purple,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  ListTile(
+                    title: Text('information'),
+                  ),
+                  Divider(
+                    color: Colors.grey,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Text('mmm          $firstName'),
+                  ),
+                  Divider(
+                    color: Colors.grey,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Text('mmm    $lastName'),
+                  ),
+                  Divider(
+                    color: Colors.grey,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Text('mmm    $birthDate'),
+                  )
+                ],
+              ),
+            ),
+          ),
+          CustomButtomAuth(
+            text: "change",
+            onPressed: () {
+              controller.goOffInformation();
+            },
+          )
+          /* WaveContainer(
             height: 500, // يمكن تعديل الارتفاع حسب الحاجة لتجنب التداخل
             color: Colors.purple, // يمكن تعديل اللون حسب الحاجة
             child: Center(
@@ -157,7 +198,7 @@ class Profile extends StatelessWidget {
                 ],
               ),
             ),
-          ),
+          ),*/
         ],
       ),
     );

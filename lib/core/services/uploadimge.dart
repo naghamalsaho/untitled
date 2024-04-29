@@ -3,7 +3,7 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:untitled/view/screen/homepage/profile.dart';
+import 'package:untitled/view/screen/profile/profile.dart';
 
 class ImageController extends GetxController {
   var selectedImage = Rxn<File>();

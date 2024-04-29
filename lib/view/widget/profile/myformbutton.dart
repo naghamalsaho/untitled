@@ -3,9 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:untitled/controller/auth/information_controller.dart';
 import 'package:untitled/controller/auth/profile_controller.dart';
-import 'package:untitled/view/screen/auth/information.dart';
-
-import '../../core/services/uploadimge.dart';
+import 'package:untitled/core/services/uploadimge.dart';
 
 class MyFormButton extends StatelessWidget {
   InformationControllerImp controller = Get.put(InformationControllerImp());
